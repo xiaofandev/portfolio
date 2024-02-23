@@ -3,143 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Cozy Shop</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: 'Helvetica', sans-serif;
+            font-family: Helvetica, sans-serif;
             font-size: 22px;
             color: seashell;
-            background-color: black;
             opacity: 0.9;
-            margin: 0;
+            background-color: black;
             text-align: center;
         }
         header {
             display: flex;
-            position: sticky;
-            top: 0;
+            justify-content: space-between;
+            align-items: center;
             height: 69px;
             border-bottom: 1px solid seashell;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1;
-            background-color: black;
         }
-        .logo {
-            margin-left: 10px;
+        header img {
             height: 50px;
-        }
-        nav {
-            display: inline-block;
-            margin-right: 10px;
+            margin-left: 10px;
         }
         header ul li {
             display: inline-block;
-            line-height: 69px;
             padding: 0 10px;
         }
         header ul li a {
-            color: seashell;
             text-decoration: underline;
+            color: seashell;
         }
         section {
             margin: 0 auto;
+        }
+        section:nth-child(2) {
+            margin-top: 60px;
+        }
+        section:nth-child(3) {
+            margin-top: 60px;
+        }
+        main {
             text-align: center;
         }
-        .describe {
-            background-color: black;
-        }
-        .mission {
-            display: flex;
+        #mission {
             background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg');
             width: 1200px;
             height: 700px;
+            display: flex;
             justify-content: center;
             align-items: center;
         }
-        .mission .describe {
+        #mission .fbox {
             width: 100%;
-        }
-        .featured-tea {
-            width: 1000px;
-            margin-top: 80px;
+            background-color: black;
         }
 
-        .featured-tea .fbox {
-            display: flex;
-            justify-content: space-around;
+        #featured-tea {
             width: 1000px;
+        }
+        #featured-tea .fbox{
+            display: flex;
             flex-wrap: wrap;
-            padding-top: 20px;
+            justify-content: space-around;
         }
-        .featured-tea .fbox .item {
-            text-align: center;
-        }
-        .featured-tea .fbox .item p {
-            margin-top: 10px;
-        }
-        .featured-tea .fbox .item img{
+        #featured-tea img {
             width: 300px;
             height: 200px;
         }
-
-        .locations {
+        #featured-tea p {
+            margin-top: 10px;
+        }
+        #locations {
             width: 1200px;
             height: 500px;
-            margin-top: 80px;
             background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg');
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
+        }
+        #locations h2 {
             padding-top: 60px;
+            margin-bottom: 15px;
         }
-        .locations .title {
-            margin-bottom: 10px;
-        }
-        .locations .fbox {
+        #locations .fbox {
             display: flex;
-            justify-content: space-around;
-            margin-bottom: 10px;
+            justify-content: center;
         }
-        
-        .locations .item {
-            background-color: black;
+        #locations .fbox .item {
             width: 300px;
-            padding-top: 20px;
-            padding-bottom: 40px;
+            margin: 0 20px;
+            background-color: black;
         }
-        .locations .item h3 {
-            padding-bottom: 10px;
+        #locations .fbox .item p {
+            margin: 40px 0;
         }
-        .locations .item p {
-            padding: 20px;
+        #locations .fbox .item p:first-of-type {
+            margin-top: 0;
+        }
+        #info {
+            height: 200px;
+        }
+        #info h2{
+            margin-top: 10px;
+        }
+        #info h5 {
+            margin: 30px 0;
+        }
+        #info h5:first-of-type {
+            margin-top: 50px;
         }
         footer {
-            padding: 10px 0;
-        }
-        footer h2 {
-            padding-bottom: 10px;
-        }
-        footer h5 {
-            padding-top: 20px;
-        }
-        
-        .copyright {
-            margin-left: 20px;
-            padding-top: 60px;
-            padding-bottom: 20px;
             text-align: left;
+            margin-left: 20px;
         }
-        
     </style>
 </head>
 <body>
     <header>
-        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png" alt="logo" class="logo">
+        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png" alt="logo">
         <nav>
             <ul>
                 <li><a href="#mission">Mission</a></li>
@@ -149,17 +126,15 @@
         </nav>
     </header>
     <main>
-        <section id="mission" class="mission">
-            <div class="describe">
+        <section id="mission">
+            <div class="fbox">
                 <h2>Our Mission</h2>
                 <h4>Handpicked,Artisanally,Curated,Free Range,Sustinable,Small Batch,Fair Trade, Organic Tea</h4>
             </div>
         </section>
-        <section id="featured-tea" class="featured-tea">
-            <div class="describe">
-                <h2>Tea of the Month</h2>
-                <h4>What's Stepping at The Tea Cozy?</h4>
-            </div>
+        <section id="featured-tea">
+            <h2>Tea of the Month</h2>
+            <h4>What's Stepping at The Tea Cozy?</h4>
             <div class="fbox">
                 <div class="item">
                     <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-berryblitz.jpg" alt="berryblitz tea">
@@ -183,8 +158,8 @@
                 </div>
             </div>
         </section>
-        <section id="locations" class="locations">
-            <h2 class="title">Locations</h2>
+        <section id="locations">
+            <h2>Locations</h2>
             <div class="fbox">
                 <div class="item">
                     <h3>Downtown</h3>
@@ -206,12 +181,14 @@
                 </div>
             </div>
         </section>
+        <section id="info">
+            <h2>The Tea Cozy</h2>
+            <h5>contact@theteacozy.com</h5>
+            <h5>917-555-8904</h5>
+        </section>
     </main>
     <footer>
-        <h2 class="shopname">The Tea Cozy</h2>
-        <h5 class="email">contact@theteacozy.com</h5>
-        <h5 class="tel">917-555-8904</h5>
+        <h5>copyright The Tea Cozy 2017</h5>
     </footer>
-    <h5 class="copyright">copyright The Tea Cozy 2017</h5>
 </body>
 </html>
